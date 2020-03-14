@@ -3,13 +3,32 @@ background-color:#064F7C;
 font-family: Microsoft JhengHei;
 }
 #countgif{
+	width:100%;
+	height:100%;
+	animation-name: fadeIn;
+	animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  z-index:100;
+}
+@keyframes fadeIn {
+  from {
+    height:100%;
+	width:100%;
+  }
+  
+  to {
+     height:0;
+	width:0;
+  }
 }
 #icons1{
 	float:left;
+
 }
 #blank{
 	width:300px;
-	padding-top:7%;
+	padding-top:1%;
 	float:left;
 	text-align: center;
 	font-size:180%;
@@ -21,8 +40,8 @@ font-family: Microsoft JhengHei;
 	margin-left:30px;
 	margin-top:300px;
 	transform-origin: 50% 50%;
-    transition: transform 10s linear;
+    transition: transform 5s linear;
+	z-index:1;
 }
 .icons:hover{
-	transform: scale(1.2) rotate(0.1deg);
-}
+	transform: scale(1.2) rotate(0.1deg);}

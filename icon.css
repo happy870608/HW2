@@ -1,0 +1,28 @@
+body{
+background-color:#064F7C;
+font-family: Microsoft JhengHei;
+}
+#countgif{
+}
+#icons1{
+	float:left;
+}
+#blank{
+	width:300px;
+	padding-top:7%;
+	float:left;
+	text-align: center;
+	font-size:180%;
+	line-height:5vh;  
+}
+.icons{
+	height:180px;
+	width:180px;
+	margin-left:30px;
+	margin-top:300px;
+	transform-origin: 50% 50%;
+    transition: transform 10s linear;
+}
+.icons:hover{
+	transform: scale(1.2) rotate(0.1deg);
+}

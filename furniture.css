@@ -1,14 +1,17 @@
 body{
 background-color:#064F7C;
 font-family: Microsoft JhengHei;
+margin:0px;
+max-width:100%;
 }
 
 #navbar1{
-	height:10%;
+	height:8%;
 }
 #logo{
-	height:90%;
+	height:85%;
 	padding-left:10px;
+	padding-top:5px;
 }
 #content{
 	background-color:white;
@@ -24,7 +27,10 @@ font-family: Microsoft JhengHei;
 color:#064F7C;
 text-decoration:none;
 border-radius:10px;
-padding:3 15 3 15px;
+padding-top:5px;
+padding-bottom:5px;
+padding-left:15px;
+padding-right:15px;
 margin-top:50px;
 margin-left:5%;
 text-transform:uppercase;
@@ -34,14 +40,25 @@ float:left;
 #icons1{
 	float:left;
 	margin-left:50%;
+	position: relative;
 }
 .icons{
+	 position: relative;
 	height:100px;
 	width:100px;
-	margin-left:10px;
+	margin-left:30px;
 	margin-top:30px;
-	transform-origin: 50% 50%;
-    transition: transform 5s linear;
-}
-.icons:hover{
-	transform: scale(1.2) rotate(0.1deg);}
+	transition: transform .5s ease-out;
+	float:left;
+    }
+	 .photo {
+    position: absolute;
+    top: 10px;
+    
+    width: 120px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: transform .5s ease-out;
+  }

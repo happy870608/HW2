@@ -2,10 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8">
-
 <title>Bed</title>
 <link href="furniture.css" rel="stylesheet" type="text/css">
-
 </head>
 <body>
 <div id="navbar1">
@@ -17,11 +15,35 @@
 <footer>
 <a id="more" href="#">more</a> 
 <div id="icons1">
-<a href="cabinet.html"><img class="icons" src="photo/1-1.png"/></a>
-<a href="lamp.html"><img class="icons" src="photo/2-1.png"/></a>
-<a href="sofa.html"><img class="icons" src="photo/3-1.png"/></a>
-<a href="bed.html"><img class="icons" src="photo/4-1.png"/></a>
+<a href="cabinet.html"><div class="icons" data-scale="1.1" data-image="photo/1-1.png"></div></a>
+<a href="lamp.html"><div class="icons" data-scale="1.1" data-image="photo/2-1.png"></div></a>
+<a href="sofa.html"><div class="icons" data-scale="1.1" data-image="photo/3-1.png"></div></a>
+<a href="bed.html"><div class="icons" data-scale="1.1" data-image="photo/4-1.png"></div></a>
 </div>
 </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+ $('.icons')
+    // tile mouse actions
+    .on('mouseover', function(){
+      $(this).children('.photo').css({'transform': 'scale('+ $(this).attr('data-scale') +')'});
+    })
+    .on('mouseout', function(){
+      $(this).children('.photo').css({'transform': 'scale(1)'});
+    })
+    .on('mousemove', function(e){
+      $(this).children('.photo').css({'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 2 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) *  2+'%'});
+    })
+    // tiles set up
+    .each(function(){
+      $(this)
+        // add a photo container
+        .append('<div class="photo"></div>')
+        // some text just to show zoom level on current item in this example
+       
+        // set up a background image for each tile based on data-image attribute
+        .children('.photo').css({'background-image': 'url('+ $(this).attr('data-image') +')'});
+    })
+</script >
 </body>
 </html>
